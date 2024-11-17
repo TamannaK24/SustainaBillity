@@ -1,3 +1,18 @@
+<script setup lang="ts">
+  import type { User } from '@/types.d'
+  import { computed, ref } from 'vue'
+  const runtimeConfig = useRuntimeConfig()
+  console.log(runtimeConfig)
+
+const user = useCookie<User>('user');
+const isLoggedIn = computed(() => (user.value?.cuid != undefined)) // linter is mad here, don't worry about it
+
+console.log(isLoggedIn)
+
+</script>
+
+
+
 <template>
   <div>
     <!-- Navbar -->
@@ -51,10 +66,18 @@
                 Timeline
               </NuxtLink>
               <!-- Profile -->
-              <NuxtLink class="dropdown-item" to="/profile">
+              <NuxtLink v-if="isLoggedIn" class="dropdown-item" to="/profile">
                 <img src="/icons/account.png" alt="Users Icon" class="dropdown-icon me-2" />
                 Profile
               </NuxtLink>
+              <a v-if="!isLoggedIn" class="dropdown-item" href="/api/login">
+                <img src="/icons/account.png" alt="Users Icon" class="dropdown-icon me-2" />
+                Profile
+              </a>
+              <a v-if="isLoggedIn" class="drop-item" href="api/logout">
+                <img class="dropdown-item"/>
+                Log Out
+              </a>
               <div class="dropdown-divider"></div>
               <!-- Settings -->
               <NuxtLink class="dropdown-item" to="/settings">
