@@ -32,20 +32,25 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">
-                  <i class="bi bi-flag me-2"></i>Goals
+                  <img src="/icons/goal.png" alt="Goals Icon" class="dropdown-icon me-2" />
+                  Goals
                 </a>
                 <a class="dropdown-item" href="#">
-                  <i class="bi bi-cash-coin me-2"></i>Cost
+                  <img src="/icons/money-bag.png" alt="Cost Icon" class="dropdown-icon me-2" />
+                  Cost
                 </a>
                 <a class="dropdown-item" href="#">
-                  <i class="bi bi-calendar me-2"></i>Timeline
+                  <img src="/icons/calendar.png" alt="Timeline Icon" class="dropdown-icon me-2" />
+                  Timeline
                 </a>
                 <a class="dropdown-item" href="#">
-                  <i class="bi bi-people me-2"></i>Users
+                  <img src="/icons/account.png" alt="Users Icon" class="dropdown-icon me-2" />
+                  Profile
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">
-                  <i class="bi bi-gear me-2"></i>Settings
+                  <img src="/icons/setting.png" alt="Settings Icon" class="dropdown-icon me-2" />
+                  Settings
                 </a>
               </div>
             </li>
@@ -60,4 +65,15 @@
     name: "AppNavbar",
   };
   </script>
+  
+  <style scoped>
+  /* Styling for icons */
+  .dropdown-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: inline-block; /* Ensure image appears next to text */
+    margin-right: 0.5rem; /* Add spacing */
+  }
+  </style>
   

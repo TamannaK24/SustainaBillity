@@ -1,28 +1,96 @@
 /* Custom CSS for Navbar and Dropdown */
 
-/* Adjust the font size for the navbar brand */
+/* Adjust the font size and styling for the navbar brand */
 .navbar-brand {
-    font-size: 1.5rem; /* Adjust as needed (1rem = 16px) */
+    font-size: 1.8rem; /* Larger brand font size */
+    font-weight: bold; /* Optional: Make the brand text bold */
+    color: #000; /* Set the brand color */
   }
   
-  /* Adjust the font size for navbar links */
+  /* Adjust the navbar links */
   .navbar-nav .nav-link {
-    font-size: 1.2rem; /* Increase font size of navbar links */
+    font-size: 1.4rem; /* Increase font size of navbar links */
+    margin-right: 20px; /* Add spacing between links */
+    color: #333; /* Set link color */
   }
   
-  /* Adjust the font size for dropdown menu items */
+  /* Adjust the dropdown menu size and spacing */
+  .nav-item .dropdown-menu {
+    font-size: 1.4rem; /* Larger text for dropdown items */
+    padding: 15px; /* Add padding around the dropdown */
+    min-width: 250px; /* Make the dropdown wider */
+    background-color: #fff; /* Optional: Set background color */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    transform: translateX(-30px); /* Move dropdown 30px to the left */
+  }
+  
+  /* Adjust the dropdown menu items */
   .nav-item .dropdown-menu a {
-    font-size: 1.1rem; /* Adjust font size of dropdown menu items */
+    font-size: 1.3rem; /* Larger font size for items */
+    padding: 12px 20px; /* Increase padding for larger clickable area */
+    color: #333; /* Set item text color */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Align icons and text */
+    align-items: center; /* Center-align text and icons */
+  }
+  
+  /* Add spacing between icons and text */
+  .nav-item .dropdown-menu a img {
+    width: 24px; /* Larger icon size */
+    height: 24px; /* Larger icon size */
+    margin-right: 15px; /* Add space between icon and text */
+  }
+  
+  /* Add hover effect for dropdown items */
+  .nav-item .dropdown-menu a:hover {
+    background-color: #f0f0f0; /* Highlight background on hover */
+    color: #000; /* Change text color on hover */
   }
   
   /* Adjust the spacing between dropdown items */
-  .nav-item .dropdown-menu a {
-    margin-bottom: 10px; /* Adjust spacing between dropdown items */
+  .nav-item .dropdown-menu a:not(:last-child) {
+    margin-bottom: 8px; /* Add spacing between dropdown items */
   }
   
   /* Optional: Adjust navbar height and padding */
   .navbar {
-    height: 100px; /* Adjust the height */
-    padding: 20px 160px; /* Adjust padding */
+    height: 120px; /* Adjust navbar height */
+    padding: 25px 100px; /* Increase padding for a larger navbar */
+  }
+  
+  /* Responsive design for mobile navbar */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px 30px; /* Reduce padding for smaller screens */
+      height: auto; /* Let height adjust naturally */
+    }
+  
+    .navbar-brand {
+      font-size: 1.5rem; /* Reduce brand font size on smaller screens */
+    }
+  
+    .navbar-nav .nav-link {
+      font-size: 1.2rem; /* Adjust link font size */
+      margin-right: 10px; /* Adjust spacing */
+    }
+  
+    .nav-item .dropdown-menu {
+      font-size: 1.2rem; /* Adjust dropdown font size */
+      padding: 10px; /* Reduce padding */
+      min-width: 200px; /* Adjust dropdown width */
+      transform: translateX(-15px); /* Move dropdown slightly to the left for smaller screens */
+    }
+  
+    .nav-item .dropdown-menu a {
+      font-size: 1.1rem; /* Adjust item font size */
+      padding: 10px; /* Adjust padding */
+    }
+  
+    .nav-item .dropdown-menu a img {
+      width: 20px; /* Smaller icon size for mobile */
+      height: 20px;
+      margin-right: 10px; /* Adjust spacing */
+    }
   }
   
