@@ -26,8 +26,10 @@ export default defineEventHandler(async event => {
               if(!event.context.user) { 
                 setCookie(event,'token','')
                 setCookie(event,'user','')
+                console.log("not in database")
                 return await sendRedirect(event, logoutRedirectUrl(token)) 
               }
+              console.log("logged in")
               setCookie(event, 'user', JSON.stringify(event.context.user))
             }
             catch (e) {
