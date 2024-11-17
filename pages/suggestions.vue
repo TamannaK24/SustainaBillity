@@ -79,17 +79,43 @@ export default {
       this.userMessage = "";
     },
     getBotResponse(message) {
-      // Example responses
-      if (message.toLowerCase().includes("reduce energy usage")) {
-        return "You can reduce energy usage by turning off lights when not in use and using energy-efficient appliances.";
-      } else if (message.toLowerCase().includes("recycle")) {
-        return "Recycling helps reduce waste. Make sure to separate your recyclables like paper, plastics, and glass.";
-      } else if (message.toLowerCase().includes("save water")) {
-        return "To save water, fix any leaks, turn off taps when not in use, and consider using water-efficient appliances.";
-      } else {
-        return "That's a great question! Consider checking out online sustainability guides or asking something specific like 'How can I reduce my carbon footprint?'.";
-      }
-    },
+  const lowerMessage = message.toLowerCase();
+
+  if (lowerMessage.includes("reduce energy usage")) {
+    return "You can reduce energy usage by turning off lights when not in use, installing LED bulbs, and optimizing your HVAC system.";
+  } else if (lowerMessage.includes("recycle")) {
+    return "Recycling is essential. Focus on separating paper, plastics, metals, and glass. Avoid contaminating recyclables with food waste.";
+  } else if (lowerMessage.includes("save water")) {
+    return "To save water, install low-flow fixtures, fix leaks, and use rainwater for irrigation or greywater recycling.";
+  } else if (lowerMessage.includes("carbon footprint")) {
+    return "You can reduce your carbon footprint by carpooling, using public transport, and switching to renewable energy sources like solar or wind.";
+  } else if (lowerMessage.includes("solar panels")) {
+    return "Solar panels are a great way to reduce energy costs and reliance on non-renewable energy. They can significantly lower your carbon footprint.";
+  } else if (lowerMessage.includes("composting")) {
+    return "Composting reduces food waste and creates nutrient-rich soil. Start by separating food scraps like fruit peels and vegetable waste from other trash.";
+  } else if (lowerMessage.includes("waste management")) {
+    return "Effective waste management involves reducing, reusing, and recycling materials. Conduct waste audits to identify areas for improvement.";
+  } else if (lowerMessage.includes("electric vehicles")) {
+    return "Electric vehicles reduce greenhouse gas emissions compared to traditional vehicles. Consider installing EV chargers for added convenience.";
+  } else if (lowerMessage.includes("energy-efficient appliances")) {
+    return "Energy-efficient appliances can significantly reduce electricity consumption. Look for appliances with ENERGY STAR ratings.";
+  } else if (lowerMessage.includes("insulation")) {
+    return "Proper insulation reduces the need for heating and cooling, saving energy. Ensure walls, roofs, and windows are well-insulated.";
+  } else if (lowerMessage.includes("smart technology")) {
+    return "Smart technologies like thermostats and motion-sensor lights help optimize energy usage and reduce waste.";
+  } else if (lowerMessage.includes("renewable energy")) {
+    return "Renewable energy options like wind, solar, and geothermal are great for reducing dependency on fossil fuels.";
+  } else if (lowerMessage.includes("plant trees")) {
+    return "Planting trees absorbs CO2, improves air quality, and provides shade that can reduce cooling costs.";
+  } else if (lowerMessage.includes("sustainability goals")) {
+    return "Start by setting realistic and measurable sustainability goals, like reducing energy consumption by 20% over the next year.";
+  } else if (lowerMessage.includes("green buildings")) {
+    return "Green buildings use eco-friendly materials and practices to reduce environmental impact. LEED certification is a great benchmark to aim for.";
+  } else {
+    return "That's a great question! Consider checking out online sustainability guides or asking something specific like 'How can I reduce my carbon footprint?' or 'What are the benefits of solar energy?'.";
+  }
+}
+
   },
 };
 </script>
