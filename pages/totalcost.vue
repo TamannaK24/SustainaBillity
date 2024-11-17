@@ -45,7 +45,7 @@
   
       <!-- GRAPH -->
       <div class="cost-trends mt-4">
-        <h3></h3>
+        <h3>Chart</h3>
         <line-chart :chart-data="chartData" :chart-options="chartOptions" />
       </div>
     </div>

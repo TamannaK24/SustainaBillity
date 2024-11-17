@@ -68,7 +68,7 @@ export default {
 /* Sidebar Styling */
 .sidebar {
   width: 200px;
-  background-color: #2c3e50;
+  background-color: #003F2D;
   color: white;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
@@ -128,5 +128,17 @@ export default {
 .cta-section .btn {
   padding: 10px 20px;
   font-size: 16px;
+}
+
+.h1 {
+  font-weight: bold; /* Make Summary text bold */
+  color: #003F2D !important; /* Match the dropdown item color */
+  text-decoration: none;
+}
+
+.h3 {
+  font-weight: bold; /* Make Summary text bold */
+  color: #003F2D !important; /* Match the dropdown item color */
+  text-decoration: none;
 }
 </style>
