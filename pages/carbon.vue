@@ -68,7 +68,7 @@ export default {
 /* Sidebar Styling */
 .sidebar {
   width: 200px;
-  background-color: #2c3e50;
+  background-color: #003F2D;
   color: white;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);

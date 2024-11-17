@@ -49,6 +49,16 @@
 
 <style>
 /* Notification Tiles Section */
+
+.sidebar {
+  width: 200px;
+  background-color: #003F2D;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-right: 20px; /* Spacing between sidebar and content area */
+}
 .notifications-section {
   margin-top: 20px;
 }

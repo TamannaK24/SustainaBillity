@@ -90,12 +90,14 @@ export default {
   margin: 15px 0;
 }
 
-.sidebar ul li a {
-  text-decoration: none;
+.sidebar {
+  width: 200px;
+  background-color: #003F2D;
   color: white;
-  font-size: 16px;
-  display: block;
-  transition: color 0.3s;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-right: 20px; /* Spacing between sidebar and content area */
 }
 
 .sidebar ul li a:hover {
