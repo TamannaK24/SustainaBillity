@@ -41,7 +41,7 @@
                 Goals
               </NuxtLink>
               <!-- Cost -->
-              <NuxtLink class="dropdown-item" to="/cost">
+              <NuxtLink class="dropdown-item" to="/totalcost">
                 <img src="/icons/money-bag.png" alt="Cost Icon" class="dropdown-icon me-2" />
                 Cost
               </NuxtLink>
