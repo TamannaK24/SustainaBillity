@@ -1,22 +1,21 @@
 <template>
     <div>
-        <AppNavbar/> 
-        <Nuxt />
-        <AppFooter/>  
+      <AppNavbar />
+      <NuxtPage /> 
+      <AppFooter />
     </div>
-</template>
-
-<script>
-
-import AppFooter from '~/components/AppFooter.vue';
-import AppNavbar from '~/components/AppNavbar.vue'; 
-
-export default {
-    name: 'default',
+  </template>
+  
+  <script>
+  import AppFooter from '~/components/AppFooter.vue';
+  import AppNavbar from '~/components/AppNavbar.vue';
+  
+  export default {
+    name: 'DefaultLayout',
     components: {
-        AppNavbar,
-        AppFooter,  
-    }
-}
-
-</script>
+      AppNavbar,
+      AppFooter,
+    },
+  };
+  </script>
+  
