@@ -1,56 +1,68 @@
 <template>
-    <div class="container mt-5">
-      <h1>Energy Consumption Timeline</h1>
-      <p>Track your building's energy consumption over time and identify trends to optimize usage.</p>
-  
-      <!-- Filters Section -->
-      <div class="filters mt-4">
-        <h3>Filter Energy Usage</h3>
-        <label for="timeframe">Select Timeframe:</label>
-        <select v-model="selectedTimeframe" id="timeframe" @change="filterConsumption">
-          <option value="daily">Daily</option>
-          <option value="monthly">Monthly</option>
-          <option value="yearly">Yearly</option>
-          <option value="all">All Time</option>
-        </select>
-      </div>
-  
-      <!-- Overview Section -->
-      <div class="overview mt-4">
-        <h3>Energy Usage Overview</h3>
-        <ul>
-          <li><strong>Total Consumption (All Time):</strong> {{ totalConsumption.allTime }} kWh</li>
-          <li><strong>Total Consumption (This Year):</strong> {{ totalConsumption.thisYear }} kWh</li>
-          <li><strong>Total Consumption (This Month):</strong> {{ totalConsumption.thisMonth }} kWh</li>
-          <li><strong>Average Daily Consumption:</strong> {{ totalConsumption.averageDaily }} kWh</li>
-        </ul>
-      </div>
-  
-      <!-- Consumption Breakdown Table -->
-      <div class="consumption-breakdown mt-4">
-        <h3>Energy Consumption Breakdown</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Time Period</th>
-              <th>Energy Usage (kWh)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="entry in filteredConsumption" :key="entry.timePeriod">
-              <td>{{ entry.timePeriod }}</td>
-              <td>{{ entry.usage }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </template>
+  <div class="container mt-5">
+    <h1>Energy Consumption Timeline</h1>
+    <p>Track your building's energy consumption over time and identify trends to optimize usage.</p>
 
+    <!-- Filters Section -->
+    <div class="filters mt-4">
+      <h3>Filter Energy Usage</h3>
+      <label for="timeframe">Select Timeframe:</label>
+      <select v-model="selectedTimeframe" id="timeframe" @change="filterConsumption">
+        <option value="daily">Daily</option>
+        <option value="monthly">Monthly</option>
+        <option value="yearly">Yearly</option>
+        <option value="all">All Time</option>
+      </select>
+
+      <!-- Calendar for Date Range Selection -->
+      <FlatpickrInput
+        label="Select Date Range:"
+        :config="calendarConfig"
+        v-model="selectedDateRange"
+        @input="filterByDateRange"
+      />
+    </div>
+
+    <!-- Overview Section -->
+    <div class="overview mt-4">
+      <h3>Energy Usage Overview</h3>
+      <ul>
+        <li><strong>Total Consumption (All Time):</strong> {{ totalConsumption.allTime }} kWh</li>
+        <li><strong>Total Consumption (This Year):</strong> {{ totalConsumption.thisYear }} kWh</li>
+        <li><strong>Total Consumption (This Month):</strong> {{ totalConsumption.thisMonth }} kWh</li>
+        <li><strong>Average Daily Consumption:</strong> {{ totalConsumption.averageDaily }} kWh</li>
+      </ul>
+    </div>
+
+    <!-- Consumption Breakdown Table -->
+    <div class="consumption-breakdown mt-4">
+      <h3>Energy Consumption Breakdown</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Time Period</th>
+            <th>Energy Usage (kWh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="entry in filteredConsumption" :key="entry.timePeriod">
+            <td>{{ entry.timePeriod }}</td>
+            <td>{{ entry.usage }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>
 
 <script>
+import FlatpickrInput from "@/components/FlatpickrInput.vue";
+
 export default {
   name: "EnergyConsumptionTimeline",
+  components: {
+    FlatpickrInput,
+  },
   data() {
     return {
       // Total Consumption Summary
@@ -75,6 +87,11 @@ export default {
       // Filter Options
       selectedTimeframe: "daily",
       filteredConsumption: [],
+      selectedDateRange: null, // For date range selection
+      calendarConfig: {
+        mode: "range", // Enable date range selection
+        dateFormat: "Y-m-d", // ISO format
+      },
     };
   },
   methods: {
@@ -95,13 +112,21 @@ export default {
         this.filteredConsumption = this.consumptionData;
       }
     },
+    filterByDateRange(selectedRange) {
+      if (selectedRange && selectedRange.length === 2) {
+        const [startDate, endDate] = selectedRange.map((date) => new Date(date));
+        this.filteredConsumption = this.consumptionData.filter((entry) => {
+          const entryDate = new Date(entry.timePeriod);
+          return entryDate >= startDate && entryDate <= endDate;
+        });
+      }
+    },
   },
   mounted() {
     this.filterConsumption(); // Filter consumption when the component is mounted
   },
 };
 </script>
-
 
 <style>
 .container {
@@ -121,10 +146,15 @@ export default {
   font-weight: bold;
 }
 
-.filters select {
+.filters select,
+.filters input {
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+.calendar {
+  margin-top: 10px;
 }
 
 /* Overview Section */

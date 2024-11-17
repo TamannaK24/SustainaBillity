@@ -90,7 +90,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 /* Styling for h1 */
 h1.text-primary {
@@ -112,15 +111,43 @@ h1.text-primary {
   color: #fff; /* Ensure text is visible on colored backgrounds */
 }
 
+/* Dynamic vibrant colors for each tile */
+.tile-container[style*="background-color: #FFD700"] {
+  background: linear-gradient(to bottom, #FFE066, #FFD700); /* Vibrant Gold */
+}
+
+.tile-container[style*="background-color: #87CEEB"] {
+  background: linear-gradient(to bottom, #7EC8E3, #1E90FF); /* Vibrant Blue */
+}
+
+.tile-container[style*="background-color: #32CD32"] {
+  background: linear-gradient(to bottom, #7FFF00, #32CD32); /* Vibrant Green */
+}
+
+.tile-container[style*="background-color: #e33f02"] {
+  background: linear-gradient(to bottom, #FF6347, #FF4500); /* Vibrant Orange-Red */
+}
+
+.tile-container[style*="background-color: #A9A9A9"] {
+  background: linear-gradient(to bottom, #C0C0C0, #696969); /* Vibrant Gray */
+}
+
+.tile-container[style*="background-color: #6A5ACD"] {
+  background: linear-gradient(to bottom, #836FFF, #483D8B); /* Vibrant Purple */
+}
+
+/* Hover Effect */
 .tile-container:hover {
   transform: translateY(-5px); /* Elevates tile on hover */
 }
 
+/* Tile Icon */
 .tile-icon {
   width: 50px;
   height: 50px;
 }
 
+/* Notification Badge */
 .corner-badge {
   font-size: 1.5rem;
   padding: 0.75em 1em;
@@ -135,11 +162,13 @@ h1.text-primary {
   justify-content: center;
 }
 
+/* Tile Title */
 .tile-title {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
+/* Tile Description */
 .tile-description {
   font-size: 0.9rem;
 }

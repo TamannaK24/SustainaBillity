@@ -1,61 +1,37 @@
-/* Navbar Brand Styling */
-
-.navbar-brand {
-  font-size: 1.8rem; /* Larger font size for the brand */
-  font-weight: bold; /* Make brand text bold */
-  color: #000; /* Set brand color */
+/* Navbar with Ombre Background */
+.navbar {
+  height: 120px; /* Set navbar height */
+  padding: 25px 100px; /* Increase padding */
+  background: linear-gradient(to bottom, #f0f0f0, #666666); /* Ombre gradient */
+  color: #fff; /* Adjust text color for better contrast */
 }
 
-/* Navbar Links Styling */
-.navbar-nav .nav-link {
-  font-size: 1.4rem; /* Increase font size */
-  margin-right: 20px; /* Spacing between links */
-  color: #333; /* Text color */
-}
-
-/* Dropdown Menu Styling */
+/* Dropdown Menu with Ombre Background */
 .nav-item .dropdown-menu {
   font-size: 1.4rem; /* Larger dropdown text */
   padding: 15px; /* Add padding around dropdown */
   min-width: 250px; /* Wider dropdown menu */
-  background-color: #fff; /* Background color */
+  background: linear-gradient(to bottom, #e0e0e0, #444444); /* Ombre gradient */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transform: translateX(-30px); /* Offset position */
+  color: #fff; /* Adjust text color for contrast */
 }
 
-/* Dropdown Menu Items */
+/* Dropdown Items */
 .nav-item .dropdown-menu a {
   font-size: 1.3rem; /* Larger font size for items */
   padding: 12px 20px; /* Larger clickable area */
-  color: #333; /* Text color */
+  color: #fff; /* White text for better contrast */
   text-decoration: none; /* No underline */
   display: flex; /* Align icons and text */
   align-items: center; /* Center alignment */
 }
 
-/* Dropdown Icons */
-.nav-item .dropdown-menu a img {
-  width: 24px; /* Icon size */
-  height: 24px;
-  margin-right: 15px; /* Spacing between icon and text */
-}
-
 /* Hover Effect for Dropdown Items */
 .nav-item .dropdown-menu a:hover {
-  background-color: #f0f0f0; /* Highlight background */
-  color: #000; /* Darker text on hover */
-}
-
-/* Spacing Between Dropdown Items */
-.nav-item .dropdown-menu a:not(:last-child) {
-  margin-bottom: 8px; /* Space between items */
-}
-
-/* Navbar Height and Padding */
-.navbar {
-  height: 120px; /* Set navbar height */
-  padding: 25px 100px; /* Increase padding */
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle highlight */
+  color: #fff; /* Keep text white */
 }
 
 /* Responsive Navbar Styling for Mobile */
@@ -91,7 +67,4 @@
     height: 20px;
     margin-right: 10px; /* Adjust spacing */
   }
-
-
-  
 }

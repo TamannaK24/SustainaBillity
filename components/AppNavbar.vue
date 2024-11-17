@@ -69,6 +69,8 @@
   </div>
 </template>
 
+
+
 <style scoped>
 /* Styling for icons */
 .dropdown-icon {
