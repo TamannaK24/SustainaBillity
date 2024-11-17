@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!-- Navbar Brand -->
       <NuxtLink class="navbar-brand me-2" to="/">
-        SustainaBillity
+        <img src="/icons/logo.png" alt="SustainaBillity Logo" class="navbar-icon" />
       </NuxtLink>
 
       <button
@@ -24,7 +24,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link dropdown-toggle summary-link"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -68,13 +68,6 @@
     </nav>
   </div>
 </template>
-
-<script>
-export default {
-  name: "AppNavbar",
-};
-</script>
-
 <style scoped>
 /* Styling for icons */
 .dropdown-icon {
@@ -83,5 +76,50 @@ export default {
   object-fit: contain;
   display: inline-block; /* Ensure image appears next to text */
   margin-right: 0.5rem; /* Add spacing */
+}
+
+/* Navbar Brand Icon */
+.navbar-icon {
+  width: 400px; /* Adjust this for desktop */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+}
+
+/* Dropdown Options Styling */
+.dropdown-menu {
+  background-color: #003F2D; /* Green background */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Optional: Rounded corners */
+}
+
+.dropdown-item {
+  font-weight: bold; /* Make dropdown text bold */
+  color: #ffffff !important; /* Set dropdown text color to white */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.dropdown-item:hover {
+  background-color: #004C3B; /* Slightly darker green for hover */
+  color: #000000 !important; /* Black text on hover */
+}
+
+/* Summary Dropdown Text Styling */
+.summary-link {
+  font-weight: bold; /* Make Summary text bold */
+  color: #003F2D !important; /* Match the dropdown item color */
+  text-decoration: none; /* Remove underline */
+}
+
+.summary-link:hover {
+  color: #001F14 !important; /* Slightly darker green for hover */
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-icon {
+    width: 20px; /* Smaller size for mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 </style>
