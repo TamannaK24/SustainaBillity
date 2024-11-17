@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
     'bootstrap/dist/css/bootstrap.min.css', // Include Bootstrap CSS
+    '@/assets/css/custom.css',
   ],
   app: {
     head: {

@@ -1,0 +1,28 @@
+/* Custom CSS for Navbar and Dropdown */
+
+/* Adjust the font size for the navbar brand */
+.navbar-brand {
+    font-size: 1.5rem; /* Adjust as needed (1rem = 16px) */
+  }
+  
+  /* Adjust the font size for navbar links */
+  .navbar-nav .nav-link {
+    font-size: 1.2rem; /* Increase font size of navbar links */
+  }
+  
+  /* Adjust the font size for dropdown menu items */
+  .nav-item .dropdown-menu a {
+    font-size: 1.1rem; /* Adjust font size of dropdown menu items */
+  }
+  
+  /* Adjust the spacing between dropdown items */
+  .nav-item .dropdown-menu a {
+    margin-bottom: 10px; /* Adjust spacing between dropdown items */
+  }
+  
+  /* Optional: Adjust navbar height and padding */
+  .navbar {
+    height: 100px; /* Adjust the height */
+    padding: 20px 160px; /* Adjust padding */
+  }
+  
