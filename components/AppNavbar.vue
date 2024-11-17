@@ -68,14 +68,22 @@
     </nav>
   </div>
 </template>
+
+
+
 <style scoped>
 /* Styling for icons */
 .dropdown-icon {
   width: 20px;
   height: 20px;
   object-fit: contain;
-  display: inline-block; /* Ensure image appears next to text */
+  display: none; /* Initially hide the icon */
   margin-right: 0.5rem; /* Add spacing */
+}
+
+/* Show icons only on hover */
+.dropdown-item:hover .dropdown-icon {
+  display: inline-block; /* Show the icon on hover */
 }
 
 /* Navbar Brand Icon */

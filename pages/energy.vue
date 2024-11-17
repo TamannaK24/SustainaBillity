@@ -38,7 +38,8 @@
                 With detailed analytics at your fingertips, you can make informed decisions 
                 to optimize energy use and create a more sustainable workspace.
               </p>
-              <button class="btn btn-success">Report an Issue</button>
+              <!-- Report an Issue Button -->
+              <nuxt-link to="/report" class="btn btn-success">Report an Issue</nuxt-link>
             </div>
           </div>
         </div>
@@ -46,7 +47,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -125,7 +125,7 @@ export default {
   margin: 10px 0;
 }
 
-.cta-section button {
+.cta-section .btn {
   padding: 10px 20px;
   font-size: 16px;
 }

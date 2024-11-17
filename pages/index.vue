@@ -65,6 +65,7 @@ export default {
           title: "HVAC Performance",
           description: "Optimize heating and cooling efficiency while monitoring indoor air quality.",
           icon: "/icons/air-conditioner.png", // Add your image path
+          notifications: 5,
           bgColor: "#e33f02", // Orange Red background
           link: "/hvac", // Route for this tile
         },
@@ -91,6 +92,13 @@ export default {
 </script>
 
 <style scoped>
+/* Styling for h1 */
+h1.text-primary {
+  font-weight: bold; /* Make text bold */
+  color: #003F2D !important; /* Apply the green color */
+}
+
+/* Tile Container */
 .tile-container {
   height: 250px; /* Adjust tile height */
   display: flex;

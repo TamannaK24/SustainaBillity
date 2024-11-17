@@ -23,7 +23,7 @@
               <div class="notification-tile high-usage">
                 <h4>High Energy Usage Detected</h4>
                 <p>
-                  Energy consumption has exceeded the usual threshold on Floor 3. Consider reducing HVAC usage.
+                  Energy consumption has exceeded the usual threshold on Floor 3. Consider turning off lights.
                 </p>
               </div>
               <div class="notification-tile sustainability-tips">

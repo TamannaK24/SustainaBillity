@@ -1,4 +1,5 @@
 /* Navbar Brand Styling */
+
 .navbar-brand {
   font-size: 1.8rem; /* Larger font size for the brand */
   font-weight: bold; /* Make brand text bold */
@@ -91,17 +92,6 @@
     margin-right: 10px; /* Adjust spacing */
   }
 
-  .navbar-icon {
-    width: 40px; /* Adjust this for desktop */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-icon {
-      width: 20px; /* Smaller size for mobile */
-      height: auto;
-    }
-  }
+
   
 }
