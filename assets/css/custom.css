@@ -1,0 +1,70 @@
+/* Navbar with Ombre Background */
+.navbar {
+  height: 120px; /* Set navbar height */
+  padding: 25px 100px; /* Increase padding */
+  background: linear-gradient(to bottom, #f0f0f0, #666666); /* Ombre gradient */
+  color: #fff; /* Adjust text color for better contrast */
+}
+
+/* Dropdown Menu with Ombre Background */
+.nav-item .dropdown-menu {
+  font-size: 1.4rem; /* Larger dropdown text */
+  padding: 15px; /* Add padding around dropdown */
+  min-width: 250px; /* Wider dropdown menu */
+  background: linear-gradient(to bottom, #e0e0e0, #444444); /* Ombre gradient */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transform: translateX(-30px); /* Offset position */
+  color: #fff; /* Adjust text color for contrast */
+}
+
+/* Dropdown Items */
+.nav-item .dropdown-menu a {
+  font-size: 1.3rem; /* Larger font size for items */
+  padding: 12px 20px; /* Larger clickable area */
+  color: #fff; /* White text for better contrast */
+  text-decoration: none; /* No underline */
+  display: flex; /* Align icons and text */
+  align-items: center; /* Center alignment */
+}
+
+/* Hover Effect for Dropdown Items */
+.nav-item .dropdown-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle highlight */
+  color: #fff; /* Keep text white */
+}
+
+/* Responsive Navbar Styling for Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px; /* Adjust padding for smaller screens */
+    height: auto; /* Adjust height dynamically */
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem; /* Smaller brand font size */
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem; /* Smaller link font size */
+    margin-right: 10px; /* Reduce spacing */
+  }
+
+  .nav-item .dropdown-menu {
+    font-size: 1.2rem; /* Adjust dropdown text size */
+    padding: 10px; /* Reduce padding */
+    min-width: 200px; /* Adjust dropdown width */
+    transform: translateX(-15px); /* Offset dropdown for smaller screens */
+  }
+
+  .nav-item .dropdown-menu a {
+    font-size: 1.1rem; /* Adjust font size */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .nav-item .dropdown-menu a img {
+    width: 20px; /* Smaller icon size */
+    height: 20px;
+    margin-right: 10px; /* Adjust spacing */
+  }
+}
