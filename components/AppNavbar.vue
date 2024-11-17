@@ -35,27 +35,32 @@
               Summary
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">
+              <!-- Goals -->
+              <NuxtLink class="dropdown-item" to="/goals">
                 <img src="/icons/goal.png" alt="Goals Icon" class="dropdown-icon me-2" />
                 Goals
-              </a>
-              <a class="dropdown-item" href="#">
+              </NuxtLink>
+              <!-- Cost -->
+              <NuxtLink class="dropdown-item" to="/cost">
                 <img src="/icons/money-bag.png" alt="Cost Icon" class="dropdown-icon me-2" />
                 Cost
-              </a>
-              <a class="dropdown-item" href="#">
+              </NuxtLink>
+              <!-- Timeline -->
+              <NuxtLink class="dropdown-item" to="/timeline">
                 <img src="/icons/calendar.png" alt="Timeline Icon" class="dropdown-icon me-2" />
                 Timeline
-              </a>
-              <a class="dropdown-item" href="#">
+              </NuxtLink>
+              <!-- Profile -->
+              <NuxtLink class="dropdown-item" to="/profile">
                 <img src="/icons/account.png" alt="Users Icon" class="dropdown-icon me-2" />
                 Profile
-              </a>
+              </NuxtLink>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+              <!-- Settings -->
+              <NuxtLink class="dropdown-item" to="/settings">
                 <img src="/icons/setting.png" alt="Settings Icon" class="dropdown-icon me-2" />
                 Settings
-              </a>
+              </NuxtLink>
             </div>
           </li>
         </ul>
